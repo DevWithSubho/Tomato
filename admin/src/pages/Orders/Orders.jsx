@@ -5,7 +5,7 @@ import axios from "axios";
 import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
 import { assets } from "../../assets/admin_assets/assets.js";
-import "./Orders.css";
+
 
 const Orders = () => {
   const { url } = useOutletContext();
