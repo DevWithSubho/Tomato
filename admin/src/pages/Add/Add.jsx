@@ -36,7 +36,7 @@ const Add = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      toast.error(response.data.message);
+      toast.error(error.message);
     }
   };
   return (

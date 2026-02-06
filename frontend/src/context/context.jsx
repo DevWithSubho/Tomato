@@ -63,7 +63,7 @@ export const ContextProvider = ({ children }) => {
     }
     try {
       if (token) {
-        const response = await axios.post(
+        await axios.post(
           `${URL}/api/cart/add`,
           {
             id: itemId,
@@ -81,7 +81,7 @@ export const ContextProvider = ({ children }) => {
     });
 
     try {
-      const response = await axios.delete(`${URL}/api/cart/remove`, {
+       await axios.delete(`${URL}/api/cart/remove`, {
         data: {
           id: itemId,
         },
@@ -100,7 +100,7 @@ export const ContextProvider = ({ children }) => {
     });
     if (token) {
       try {
-        const response = axios.put(
+        axios.put(
           `${URL}/api/cart/delete`,
           { id: itemId },
           { headers: { token: localStorage.getItem("token") } },

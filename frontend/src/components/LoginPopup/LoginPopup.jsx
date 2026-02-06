@@ -7,7 +7,7 @@ import { useContext, useRef, useState } from "react";
 import { cartContext } from "../../context/context";
 import { toast } from "react-toastify";
 const LoginPopup = () => {
-  const { URL, token, setToken } = useContext(cartContext);
+  const { URL, setToken } = useContext(cartContext);
   const name = useRef();
   const email = useRef();
   const password = useRef();
@@ -22,7 +22,7 @@ const LoginPopup = () => {
         email: email.current.value,
         password: password.current.value,
       });
-      
+
       if (response.data.success) {
         toast.success("user registered sucessfully");
         setToken(response.data.token);
@@ -32,7 +32,7 @@ const LoginPopup = () => {
         toast.error("something error please try again");
       }
     } catch (error) {
-      toast.error("Error");
+      toast.error(error.message);
     }
   };
 
@@ -43,7 +43,7 @@ const LoginPopup = () => {
         email: email.current.value,
         password: password.current.value,
       });
- 
+
       if (response.data.success) {
         toast.success("user logedin sucessfully");
         setToken(response.data.token);
@@ -53,7 +53,7 @@ const LoginPopup = () => {
         toast.error("something went wrong");
       }
     } catch (error) {
-      toast.error("Error");
+      toast.error(error.message);
     }
   };
   return (

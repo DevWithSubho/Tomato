@@ -3,17 +3,15 @@ import "./List.css";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
 const List = () => {
-  const { url } = useOutletContext();
   const [list, setlist] = useState([]);
-
+  const url = import.meta.env.VITE_BACKEND_UR;
   const fetchList = async () => {
     try {
       const response = await axios.get(`${url}/api/food/list`);
       setlist(response.data.data);
     } catch (error) {
-      toast.error("Error");
+      toast.error(error.message);
     }
   };
   const onDeleteFunc = async (id) => {
@@ -26,7 +24,7 @@ const List = () => {
       await fetchList();
       toast.success(response.data.message);
     } catch (error) {
-      toast.error(response.data.message);
+      toast.error(error.message);
     }
   };
   useEffect(() => {
