@@ -2,9 +2,7 @@ import mongoose from "mongoose";
 
 export const connectDB = () => {
   mongoose
-    .connect(
-      "mongodb+srv://Paul_Subhajit:Subhapl1234@cluster0.1xmhmpl.mongodb.net/food-app?"
-    )
+    .connect(process.env.MONGO_URI)
     .then(() => {
       console.log("db connected");
     })
