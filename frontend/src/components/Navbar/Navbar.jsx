@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { assets } from "../../assets/frontend_assets/assets";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginSliceActions } from "../../store/loginSlice";
 import { cartContext } from "../../context/context";
 const Navbar = () => {

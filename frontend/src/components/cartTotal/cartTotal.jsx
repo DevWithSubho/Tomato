@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { cartContext } from "../../context/context";
-
+import { useNavigate } from "react-router-dom";
 
 const CartTotal = () => {
- const{subTotal, cartStore}= useContext(cartContext);
+  const { subTotal, delivaryFees } = useContext(cartContext);
+  const navigate = useNavigate();
   return (
     <div className="cart-total">
       <h2>Cart Totals</h2>

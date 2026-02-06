@@ -1,4 +1,4 @@
-import "./exploreMenu.css";
+import "./exploremenu.css";
 import { menu_list } from "../../assets/frontend_assets/assets";
 import { useDispatch, useSelector } from "react-redux";
 import { categorySliceActions } from "../../store/categoryslice";

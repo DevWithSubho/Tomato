@@ -1,6 +1,6 @@
 // loadingSpinner.jsx
-import React from "react";
-import "./loadingSpinner.css"; // import the CSS file
+
+import "./LoadingSpinner.css"; // import the CSS file
 
 const LoadingSpinner = () => {
   return (
