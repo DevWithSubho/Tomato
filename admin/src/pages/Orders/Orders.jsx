@@ -2,13 +2,12 @@ import { useState } from "react";
 import "./Orders.css";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { useOutletContext } from "react-router-dom";
 import { useEffect } from "react";
 import { assets } from "../../assets/admin_assets/assets.js";
 
 
 const Orders = () => {
-  const { url } = useOutletContext();
+const url = import.meta.env.VITE_BACKEND_URL;
   const [orderLists, setOrderlists] = useState([]);
   const fetchList = async () => {
     try {

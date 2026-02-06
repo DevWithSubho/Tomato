@@ -3,10 +3,10 @@ import { assets } from "../../assets/admin_assets/assets";
 import { useRef, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useOutletContext } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
 const Add = () => {
   const [image, setImage] = useState(false);
-  const { url } = useOutletContext();
+  const url = import.meta.env.VITE_BACKEND_URL;
 
   const productName = useRef("");
   const productDesc = useRef("");

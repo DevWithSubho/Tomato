@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { ToastContainer } from "react-toastify";
 function App() {
-  const url = "http://localhost:4000";
+
   return (
     <>
       <div>
@@ -13,7 +13,7 @@ function App() {
         <hr />
         <div className="app-content">
           <Sidebar />
-          <Outlet context={{ url }} />
+          <Outlet  />
         </div>
       </div>
     </>

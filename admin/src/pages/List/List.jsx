@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { useEffect } from "react";
 const List = () => {
   const [list, setlist] = useState([]);
-  const url = import.meta.env.VITE_BACKEND_UR;
+  const url = import.meta.env.VITE_BACKEND_URL;
   const fetchList = async () => {
     try {
       const response = await axios.get(`${url}/api/food/list`);
