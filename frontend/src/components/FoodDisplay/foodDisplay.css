@@ -1,0 +1,52 @@
+.food-display{
+  margin-top: 30px;
+ 
+
+}
+.food-display h2{
+  font-size: max(2vw, 24px);
+  font-weight: 600;
+}
+
+.food-display-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
+}
+
+/* Animation for items appearing */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to food items */
+.food-item {
+  animation: fadeIn 0.5s ease-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Stagger the animations for items */
+.food-display-list > * {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.food-display-list > *:nth-child(1) { animation-delay: 0.1s; }
+.food-display-list > *:nth-child(2) { animation-delay: 0.2s; }
+.food-display-list > *:nth-child(3) { animation-delay: 0.3s; }
+.food-display-list > *:nth-child(4) { animation-delay: 0.4s; }
+.food-display-list > *:nth-child(5) { animation-delay: 0.5s; }
+.food-display-list > *:nth-child(6) { animation-delay: 0.6s; }

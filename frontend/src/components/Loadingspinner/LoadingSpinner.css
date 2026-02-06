@@ -1,0 +1,27 @@
+.spinner-container {
+position: relative;            /* stays fixed on screen */
+  top: 0;
+  left: 0;
+  width: 80vw;               /* full viewport width */
+  height: 5vh;              /* full viewport height */
+  display: flex;
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically */     
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: tomato;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  transform-origin: center;  /* ensures perfect center rotation */
+ 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
