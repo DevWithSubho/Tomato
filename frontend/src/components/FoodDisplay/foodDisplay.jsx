@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import "./FoodDisplay.css";
+import "./foodDisplay.css";
 import FoodItem from "../FoodItem/foodItem";
 import { useContext } from "react";
 import { cartContext } from "../../context/context";
