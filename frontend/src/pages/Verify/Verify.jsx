@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { cartContext } from "../../context/context";
-import "./verify.css";
+import "./Verify.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const Verify = () => {
   const [searchParams] = useSearchParams();
- const ranRef = useRef(false);
+  const ranRef = useRef(false);
   const { URL } = useContext(cartContext);
   const navigate = useNavigate();
   const success = searchParams.get("success");
@@ -36,7 +36,7 @@ const Verify = () => {
       }
     }
   };
- 
+
   useEffect(() => {
     if (ranRef.current) return; // prevent double-run in React StrictMode (dev)
     if (!URL) {
