@@ -7,12 +7,7 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-            tempora nesciunt id est assumenda, provident velit libero natus
-            labore earum? Eaque beatae quasi quia amet quibusdam molestias odit
-            repellendus magni eum quod sequi soluta recusandae voluptate sint ab
-            eligendi architecto exercitationem placeat est animi aliquam iusto
-            consequatur, doloribus in? Inventore.
+            Tomato is a modern online food ordering platform that lets users discover nearby restaurants, place orders easily, and get fresh food delivered right to their doorstep with a smooth and secure experience.
           </p>
           <div className="footer-social-icon">
             <img src={assets.facebook_icon} alt="" />
@@ -37,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright © 2025 - All Rights Reserved</p>
+      <p className="footer-copyright">Copyright © 2026 - All Rights Reserved</p>
     </div>
   );
 };
